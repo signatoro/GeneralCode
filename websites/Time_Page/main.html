@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title> Time </title>
+    </head>
+
+    <style>
+
+        .vertical-center {
+          margin: 0;
+          position: absolute;
+          top: 35%;
+          left: 37%;
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+        }
+
+        .time-text
+        {
+            color: #282e2e;
+            font-size: 50;
+        }
+
+    </style>
+        
+    
+    <div class="vertical-center">
+        <body style="background-color:  #1b1c1c;">
+            <div class="time-text">
+                <h1 id="current_time"><center></center></h1>
+                <!-- <p id="current_date"><center></center></p> -->
+            </div>
+
+
+    </div>
+
+<script>
+    let time = document.getElementById("current_time");
+
+    setInterval(() =>{
+        let t = new Date();
+        time.innerHTML = t.toLocaleTimeString();
+    }, 1000)
+
+    // let date = document.getElementById("current_date");
+    // setInterval(() =>{
+    //     let d = new Date();
+    //     time.innerHTML = d.toLocaleDateString();
+    // }, 1000)
+
+</script>
+        </body>
+</html>
